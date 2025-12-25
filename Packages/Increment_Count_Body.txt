@@ -1,0 +1,7 @@
+create or replace package body count_var as
+procedure counter_sum is
+begin
+g_counter := g_counter+1;
+DBMS_OUTPUT.PUT_LINE(g_counter);
+end counter_sum;
+end;

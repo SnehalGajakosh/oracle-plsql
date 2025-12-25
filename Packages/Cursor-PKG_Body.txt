@@ -1,0 +1,16 @@
+create or replace package body emp_pkg as
+procedure employee_store is
+v_emp employees.employee_id%type;
+begin
+if emp_detail%isopen then
+close emp_detail;
+end if;
+open emp_detail;
+loop
+fetch emp_detail into v_emp;
+DBMS_output.put_line(v_emp);
+exit when emp_detail%notfound;
+end loop;
+close emp_detail;
+end employee_store;
+end;

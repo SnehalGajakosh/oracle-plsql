@@ -1,0 +1,4 @@
+create or replace package count_var as
+g_counter number:=0;
+procedure counter_sum;
+end count_var;

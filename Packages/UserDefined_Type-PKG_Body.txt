@@ -1,0 +1,11 @@
+create or replace package body record_pkg as
+procedure str_emp(emp_var employees.employee_id%type) is
+rec_var record_pkg.emp_details;
+begin
+select employee_id,first_name,last_name into rec_var.emp_id,rec_var.fname,rec_var.lname from employees where employee_id=emp_var;
+dbms_output.put_line(rec_var.emp_id||' '||rec_var.fname ||' '||rec_var.lname);
+exception 
+when no_data_found then
+DBMS_output.put_line('Invalid emp id');
+end str_emp;
+end;

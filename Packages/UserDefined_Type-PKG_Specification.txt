@@ -1,0 +1,4 @@
+create or replace package record_pkg as
+type emp_details is record (emp_id employees.employee_id%type, fname employees.first_name%type, lname employees.last_name%type);
+procedure str_emp(emp_var employees.employee_id%type);
+end record_pkg;

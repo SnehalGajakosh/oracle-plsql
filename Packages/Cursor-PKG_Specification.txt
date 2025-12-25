@@ -1,0 +1,4 @@
+create or replace package emp_pkg as
+cursor emp_detail is select employee_id from employees where rownum<=50;
+procedure employee_store;
+end emp_pkg;
