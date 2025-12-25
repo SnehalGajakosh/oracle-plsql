@@ -1,0 +1,4 @@
+create or replace package pkg_prac as
+my_pie constant number := 3.1456;
+procedure PIE_value;
+end pkg_prac;

@@ -1,0 +1,6 @@
+create or replace package body pkg_prac as
+procedure pie_value is
+begin
+dbms_output.put_line(my_pie);
+end pie_value;
+end;
